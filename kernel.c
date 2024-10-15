@@ -19,7 +19,7 @@ void p(volatile uint16_t* A, const char pattern[], unsigned short x, unsigned sh
     unsigned short  index = x + y * 80;
     uint16_t i,row = 0, count = 0;
 
-    // Provided patterns have length lesas than 256
+    // Provided patterns have length less than 256
     for (i = 0; i < 255; i++) {
         // Decode the pattern array extracting 2 bits storing into a byte.
         char c = (pattern[i / 4] >> (6 - 2 * (i % 4))) & 0x3;
